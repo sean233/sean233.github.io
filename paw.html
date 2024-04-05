@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petelligent - Serial Number Verification</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .gallery-image {
+            height: 200px; /* Adjust the height as needed */
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Fixed 3x3 Photo Gallery -->
+        <div class="row mb-4">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
+                <img src="1.jpg" class="gallery-image w-100" alt="Image 1">
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
+                <img src="2.jpg" class="gallery-image w-100" alt="Image 1">
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
+                <img src="3.jpg" class="gallery-image w-100" alt="Image 1">
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
+                <img src="4.jpg" class="gallery-image w-100" alt="Image 1">
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
+                <img src="5.jpg" class="gallery-image w-100" alt="Image 1">
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
+                <img src="6.jpg" class="gallery-image w-100" alt="Image 1">
+            </div>
+            <!-- Repeat for the remaining 8 images -->
+            <!-- Make sure to replace 'imageX.jpg' with the actual paths to your images -->
+        </div>
+
+        <!-- Serial Number Verification Form -->
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h2 class="text-center mb-4">Serial Number Verification</h2>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="serialInput" placeholder="Enter Serial Number">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" onclick="verifySerialNumber()">Verify</button>
+                    </div>
+                </div>
+                <p id="result" class="text-center"></p>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
+                <img src="7.jpg" class="gallery-image w-100" alt="Image 1">
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
+                <img src="8.jpg" class="gallery-image w-100" alt="Image 1">
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
+                <img src="9.jpg" class="gallery-image w-100" alt="Image 1">
+            </div>
+
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
+                <img src="10.jpg" class="gallery-image w-100" alt="Image 1">
+            </div>
+
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
+                <img src="11.jpg" class="gallery-image w-100" alt="Image 1">
+            </div>
+
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
+                <img src="12.jpg" class="gallery-image w-100" alt="Image 1">
+            </div>
+            <!-- Repeat for the remaining 8 images -->
+            <!-- Make sure to replace 'imageX.jpg' with the actual paths to your images -->
+        </div>
+    </div>
+
+    <!-- Bootstrap and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="verify.js"></script>
+</body>
+</html>
