@@ -11,86 +11,180 @@
             height: 200px; /* Adjust the height as needed */
             object-fit: cover;
             margin-bottom: 15px;
+            cursor: pointer;
+        }
+        .navbar {
+            background-color: #f8d668; /* Adjust the background color as needed */
+        }
+        .navbar-brand img {
+            height: 50px; /* Adjust the height as needed */
+        }
+        .navbar-nav .nav-link {
+            color: white;
+            font-weight: bold;
+        }
+        .navbar-sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .styled-header {
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+            color: #333;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
+    <!-- Header with Logo and Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-sticky">
+        <div class="container">
+            <div class="mx-auto d-flex align-items-center">
+                <a class="navbar-brand" href="https://pawgeni.com">
+                    <img src="logo.png" alt="PawGeni Logo">
+                    <span>PawGeni</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
     <div class="container mt-5">
         <!-- Fixed 3x3 Photo Gallery -->
-        <div class="row mb-4">
+        <!-- <div class="row mb-4">
             <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
-                <img src="1.jpg" class="gallery-image w-100" alt="Image 1">
+                <a href="https://pawgeni.com"><img src="1.jpg" class="gallery-image w-100" alt="Image 1"></a>
             </div>
-
             <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
-                <img src="2.jpg" class="gallery-image w-100" alt="Image 1">
+                <a href="https://pawgeni.com"><img src="2.jpg" class="gallery-image w-100" alt="Image 2"></a>
             </div>
-
             <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
-                <img src="3.jpg" class="gallery-image w-100" alt="Image 1">
+                <a href="https://pawgeni.com"><img src="3.jpg" class="gallery-image w-100" alt="Image 3"></a>
             </div>
-
-            <!-- Repeat for the remaining 8 images -->
-            <!-- Make sure to replace 'imageX.jpg' with the actual paths to your images -->
-        </div>
+        </div> -->
 
         <!-- Serial Number Verification Form -->
         <div class="row">
             <div class="col-md-8 offset-md-2">
-                <h2 class="text-center mb-4">Serial Number Verification</h2>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" id="serialInput" placeholder="Enter Serial Number">
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button" onclick="verifySerialNumber()">Verify</button>
+                <h2 class="text-center mb-4 styled-header">Check Product Authenticity</h2>
+                <h4 class="text-center mb-4">Please enter your email and the serial number from the product label</h4>
+       
+                <form id="verificationForm" action="https://formspree.io/f/xldrrjjb" method="POST" onsubmit="return handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label for="emailInput"></label>
+                        <input type="email" class="form-control" id="emailInput" name="email" placeholder="Enter your email" required>
                     </div>
-                </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="serialInput" name="serial" placeholder="Enter Serial Number" required>
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="submit" onclick="verifySerialNumber()">Verify</button>
+                        </div>
+                    </div>
+                </form>
                 <p id="result" class="text-center"></p>
             </div>
         </div>
 
+        <!-- Additional Clickable Images -->
         <div class="row mb-4">
-
             <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
-                <img src="4.jpg" class="gallery-image w-100" alt="Image 1">
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
-                <img src="5.jpg" class="gallery-image w-100" alt="Image 1">
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
-                <img src="6.jpg" class="gallery-image w-100" alt="Image 1">
+                <a href="https://pawgeni.com"><img src="4.jpg" class="gallery-image w-100" alt="Image 4"></a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
-                <img src="7.jpg" class="gallery-image w-100" alt="Image 1">
+                <a href="https://pawgeni.com"><img src="5.jpg" class="gallery-image w-100" alt="Image 5"></a>
             </div>
-
             <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
-                <img src="8.jpg" class="gallery-image w-100" alt="Image 1">
+                <a href="https://pawgeni.com"><img src="6.jpg" class="gallery-image w-100" alt="Image 6"></a>
             </div>
-
             <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
-                <img src="9.jpg" class="gallery-image w-100" alt="Image 1">
+                <a href="https://pawgeni.com"><img src="7.jpg" class="gallery-image w-100" alt="Image 7"></a>
             </div>
-
-
             <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
-                <img src="10.jpg" class="gallery-image w-100" alt="Image 1">
+                <a href="https://pawgeni.com"><img src="8.jpg" class="gallery-image w-100" alt="Image 8"></a>
             </div>
-
-
             <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
-                <img src="11.jpg" class="gallery-image w-100" alt="Image 1">
+                <a href="https://pawgeni.com"><img src="9.jpg" class="gallery-image w-100" alt="Image 9"></a>
             </div>
-
-
             <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
-                <img src="12.jpg" class="gallery-image w-100" alt="Image 1">
+                <a href="https://pawgeni.com"><img src="10.jpg" class="gallery-image w-100" alt="Image 10"></a>
             </div>
-            <!-- Repeat for the remaining 8 images -->
+            <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
+                <a href="https://pawgeni.com"><img src="11.jpg" class="gallery-image w-100" alt="Image 11"></a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
+                <a href="https://pawgeni.com"><img src="12.jpg" class="gallery-image w-100" alt="Image 12"></a>
+            </div>
+            <!-- Repeat for the remaining images -->
             <!-- Make sure to replace 'imageX.jpg' with the actual paths to your images -->
         </div>
     </div>
+
+    <!-- Formspree Integration -->
+    <!-- Read the Formbutton docs at formspree.io/formbutton/docs. See more examples at codepen.io/formspree -->
+    <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+    <script>
+      /* paste this line in verbatim */
+      window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+      /* customize formbutton below*/     
+      formbutton("create", {
+        action: "https://formspree.io/f/xldrrjjb",
+        title: "How can we help?",
+        fields: [
+          { 
+            type: "email", 
+            label: "Email:", 
+            name: "email",
+            required: true,
+            placeholder: "your@email.com"
+          },
+          {
+            type: "textarea",
+            label: "Message:",
+            name: "message",
+            placeholder: "What's on your mind?",
+          },
+          { type: "submit" }      
+        ],
+        styles: {
+          title: {
+            backgroundColor: "gray"
+          },
+          button: {
+            backgroundColor: "gray"
+          }
+        }
+      });
+
+      function handleFormSubmit(event) {
+          event.preventDefault();
+          const form = event.target;
+          const formData = new FormData(form);
+          fetch(form.action, {
+              method: form.method,
+              body: formData,
+              headers: {
+                  'Accept': 'application/json'
+              }
+          }).then(response => {
+              if (response.ok) {
+                  document.getElementById('result').textContent += " Thanks for your submission!";
+                  form.reset();
+              } else {
+                  response.json().then(data => {
+                      if (Object.hasOwn(data, 'errors')) {
+                          document.getElementById('result').textContent = data["errors"].map(error => error["message"]).join(", ");
+                      } else {
+                          document.getElementById('result').textContent = "Oops! There was a problem submitting your form";
+                      }
+                  });
+              }
+          }).catch(error => {
+              document.getElementById('result').textContent = "Oops! There was a problem submitting your form";
+          });
+      }
+    </script>
 
     <!-- Bootstrap and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -98,4 +192,4 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="verify.js"></script>
 </body>
-</html>
+</html
